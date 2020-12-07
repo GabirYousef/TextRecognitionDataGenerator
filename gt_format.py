@@ -13,21 +13,22 @@ def write_line(line):
         f.write(line + "\n")
 
 
-imgs_dir = "/home/ec2-user/TextRecognitionDataGenerator/out"
-new_imgs = "/home/ec2-user/TextRecognitionDataGenerator/out-new"
+imgs_dir = "out"
+new_imgs = "out-new"
 
 for line in os.listdir(imgs_dir):
     name = get_random_string(15)
-    print(name)
-   #  print("line: ", line)
+#     print(name)
+
+    print("line: ", line)
     img = cv2.imread(os.path.join(imgs_dir, line))
     cv2.imwrite(os.path.join(new_imgs, name + ".jpg"), img)
             # os.rename(self.data_directory + line, self.output_dir + name + ".jpg")
             # file_name = line.split('_')[1][:-4]
-    gt = line.split("_")[0][::-1]
-    # print("gt: ", gt)
+    gt = line.split("_")[0][::1]
+    print("gt: ", gt)
     # new_gt, new_char_lst = self.check_gt(gt, new_char_lst)
     # threshold = 120
     new_line = name + ".jpg" + " " + gt
     write_line(new_line)
-    #break
+    break
