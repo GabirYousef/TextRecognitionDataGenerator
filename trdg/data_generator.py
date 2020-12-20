@@ -53,6 +53,7 @@ class FakeTextDataGenerator(object):
         image = None
 
         margin_top, margin_left, margin_bottom, margin_right = margins
+        top_margin = 0
         horizontal_margin = margin_left + margin_right
         vertical_margin = margin_top + margin_bottom
 
