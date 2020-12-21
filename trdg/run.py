@@ -264,7 +264,7 @@ def parse_arguments():
         type=margins,
         nargs="?",
         help="Define the margins around the text when rendered. In pixels",
-        default=(0, 0, 0, 0),
+        default=(5, 5, 5, 5),
     )
     parser.add_argument(
         "-fi",
@@ -440,7 +440,7 @@ def main():
     # args.blur = 2
     args.background = 3
     
-    args.output_dir = "/home/gabir/Desktop/Active_Projects/Deeplance/David OCR project/TextRecognitionDataGenerator/out-photo/"
+    args.output_dir = "out-photo/"
     # args.image_dir = "/home/gabir/Desktop/Active_Projects/Deeplance/David OCR project/TextRecognitionDataGenerator/trdg/images/photo_out.jpg"
 
 
